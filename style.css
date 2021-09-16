@@ -75,7 +75,92 @@
      margin-bottom: 5px;
  }
 
+ form .gender-info{
+     width: 100%;
+ }
+
  form .gender-info .gender-title{
     font-size: 20px;
     font-weight: 500;
+ }
+
+ form .gender-info .category{
+     display: flex;
+     width: 80%;
+     margin: 14px 0;
+     justify-content: space-between;
+ }
+
+ form .gender-info .category label{
+    display: flex;
+    align-items: center;
+ }
+
+ form .gender-info .category .dots{
+    height: 18px;
+    width: 18px;
+    background: #d9d9d9;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 3px solid transparent;
+    transition: all 0.3s ease;
+ }
+
+ #dot-1:checked ~ .category .one,
+ #dot-2:checked ~ .category .two,
+ #dot-3:checked ~ .category .three{
+    border-color: #d9d9d9;
+    background: #7b4397;
+ }
+
+ form input[type="radio"]{
+     display: none;
+ }
+
+ form .registration-button{
+     height: 45px;
+     margin: 45px 0;
+     width: 100%;
+ }
+
+ form .registration-button input{
+     height: 100%;
+     width: 100%;
+     background: linear-gradient(135deg, #7b4397, #dc2430);
+     outline: none;
+     border: none;
+     font-size: 20px;
+     font-weight: 500;
+     letter-spacing: 1px;
+     border-radius: 5px;
+     transition: all 0.3s ease;
+ }
+
+ form .registration-button input:hover{
+    background: linear-gradient(280deg, #7b4397, #dc2430);
+    font-size: 25px;
+ }
+
+ @media (max-width: 584px){
+     .container{
+         max-width: 100%;
+     }
+
+     form .user-info .input-box{
+         margin-bottom: 15px;
+         width: 100%; 
+     }
+
+     form .gender-info .category{
+        width: 100%;
+     }
+
+     .container form .user-info{
+         max-height: 450px;
+         overflow-y: scroll;
+     }
+
+     .user-info::-webkit-scrollbar{
+         width: 0;
+     }
  }
